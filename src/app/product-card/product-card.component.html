@@ -3,6 +3,8 @@
     <div class="card-body">
       <h5 class="card-title">{{ product.title }}</h5>
       <p class="card-text">{{ product.productrice | currency: 'EUR': true }}</p>
-      <a *ngIf="showActions" href="#" class="btn btn-primary">Add to cart</a>
+    </div>
+    <div class="card-footer">
+        <a *ngIf="showActions" href="#" class="btn btn-primary d-md-block">Add to cart</a>
     </div>
   </div>
