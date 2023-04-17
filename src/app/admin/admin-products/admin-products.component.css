@@ -1,0 +1,16 @@
+.datatable-icon-left::before {
+    content: '\2190';
+  }
+  
+  .datatable-icon-right::before {
+    content: '\2192';
+  }
+  
+  .datatable-icon-prev::before {
+    content: '\2190';
+  }
+  
+  .datatable-icon-skip::before {
+    content: '\2192';
+  }
+  
