@@ -22,9 +22,14 @@ export class ProductCardComponent {
     this.cartSevice.removeFromCart(this.product);
   }
 
-  getQuantity(){
-    if(!this.shoppingCart) return 0;
-    let item = this.shoppingCart.items[this.product.key];
-    return item ? item.quantity : 0;
-  }
+  getQuantity() {
+  if (!this.shoppingCart) return 0;
+
+  const item = this.shoppingCart.items.find(
+    (item) => item.product.key === this.product.key
+  );
+  return item ? item.quantity : 0;
+}
+
+  
 }

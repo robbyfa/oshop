@@ -11,10 +11,10 @@ import { Observable } from 'rxjs';
 export class ShoppingCartComponent implements OnInit{
   cart$: Observable<ShoppingCart>;
 
-  constructor(private shoppingCartService: ShoppingCartService){}
+  constructor(private shoppingCartService: ShoppingCartService){
+  }
 
-
-  async ngOnInit() {
-      this.cart$ = await this.shoppingCartService.getCart();
+  async ngOnInit(){
+    this.cart$ = await this.shoppingCartService.getCart();
   }
 }
