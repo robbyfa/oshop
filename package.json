@@ -24,6 +24,7 @@
     "@swimlane/ngx-datatable": "^20.1.0",
     "angular-4-data-table": "^0.4.6",
     "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.4",
     "firebase": "^9.19.1",
     "font-awesome": "^4.7.0",
     "ng2-validation": "^3.9.1",
