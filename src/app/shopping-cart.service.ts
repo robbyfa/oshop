@@ -54,25 +54,19 @@ export class ShoppingCartService {
   private async updateItem(product: Product, change: number) {
     let cartId = await this.getOrCreateCartId();
     let item$ = this.getItem(cartId, product.$key);
-    console.log("Updating item with key:", product.$key);
   
     item$.snapshotChanges().pipe(take(1)).subscribe((snapshot: any) => {
       const item = snapshot.payload.val() || {};
-      console.log("Item before update:", item);
-  
+      let quantity = (item.quantity || 0) + change;
+      if(quantity === 0) item$.remove();
+      else
       item$.update({
         title: product.title,
         imageUrl: product.imageUrl,
         price: product.price,
-        quantity: (item.quantity || 0) + change
+        quantity: quantity
       });
   
-      console.log("Item after update:", {
-        title: product.title,
-        imageUrl: product.imageUrl,
-        price: product.price,
-        quantity: (item.quantity || 0) + change
-      });
     });
   }
   
