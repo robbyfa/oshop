@@ -2,3 +2,67 @@
 .dropdown-toggle { 
     cursor: pointer;
   }
+  
+/* Set base font and colors */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* Set up the Navbar */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem; /* Add padding */
+}
+
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  font-size: 1rem;
+}
+
+.nav-item {
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #e9ecef;
+}
+
+.dropdown-menu {
+  border-radius: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Set up the badge */
+.badge {
+  background-color: #dc3545;
+}
+
+/* Set up animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.nav-item,
+.dropdown-menu {
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 767px) {
+  .nav-item {
+    padding: 0.5rem 1rem;
+  }
+}

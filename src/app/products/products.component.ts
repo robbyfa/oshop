@@ -6,11 +6,10 @@ import { Product } from '../models/product';
 import { ShoppingCartService } from '../shopping-cart.service';
 import { Observable, Subscription } from 'rxjs';
 import { ShoppingCart } from '../models/shopping-cart';
-
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit{
   products:Product[] = [];

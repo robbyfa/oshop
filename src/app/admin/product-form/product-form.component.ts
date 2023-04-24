@@ -16,7 +16,8 @@ export class ProductFormComponent {
     price: null,
     category: '',
     imageUrl: ''
-  };  
+  };
+  
   id;
   constructor(
     private route: ActivatedRoute,
@@ -27,9 +28,14 @@ export class ProductFormComponent {
   
       this.id = this.route.snapshot.paramMap.get('id');
       if (this.id) {
-        this.productService.get(this.id).pipe(take(1)).subscribe(p => (this.product = p)); 
+        this.productService.get(this.id).pipe(take(1)).subscribe(p => {
+          if (p) {
+            this.product = p;
+          }
+        }); 
       } 
   }
+
 
   save(product){
     if (this.id) this.productService.update(this.id, product);
